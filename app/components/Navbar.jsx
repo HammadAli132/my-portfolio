@@ -14,9 +14,9 @@ function Navbar() {
         <div className="hidden md:flex">
           <ul className="flex gap-6">
             <li><Link href="/" className="navbar-li">Home</Link></li>
-            <li><Link href="/about" className="navbar-li">About</Link></li>
-            <li><Link href="/projects" className="navbar-li">Projects</Link></li>
-            <li><Link href="/contact" className="navbar-li">Contact</Link></li>
+            <li><Link href="#about" className="navbar-li">About</Link></li>
+            <li><Link href="#projects" className="navbar-li">Projects</Link></li>
+            <li><Link href="#contact" className="navbar-li">Contact</Link></li>
           </ul>
         </div>
 

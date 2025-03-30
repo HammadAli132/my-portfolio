@@ -23,9 +23,9 @@ function MobileMenu() {
         <nav className="mt-6">
           <ul className="flex flex-col space-y-6 px-6">
             <li><Link href="/" className="navbar-li text-white" onClick={() => setIsOpen(false)}>Home</Link></li>
-            <li><Link href="/about" className="navbar-li text-white" onClick={() => setIsOpen(false)}>About</Link></li>
-            <li><Link href="/projects" className="navbar-li text-white" onClick={() => setIsOpen(false)}>Projects</Link></li>
-            <li><Link href="/contact" className="navbar-li text-white" onClick={() => setIsOpen(false)}>Contact</Link></li>
+            <li><Link href="#about" className="navbar-li text-white" onClick={() => setIsOpen(false)}>About</Link></li>
+            <li><Link href="#projects" className="navbar-li text-white" onClick={() => setIsOpen(false)}>Projects</Link></li>
+            <li><Link href="#contact" className="navbar-li text-white" onClick={() => setIsOpen(false)}>Contact</Link></li>
           </ul>
         </nav>
       </div>
