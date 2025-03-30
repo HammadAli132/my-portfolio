@@ -41,7 +41,7 @@ function Footer() {
           <h2 className="text-md font-semibold">CONTACT</h2>
           <div className="flex items-center gap-2">
             <FaPhone size={16} />
-            <a href="tel:+923359219050" className="text-gray-400">+92 335 9219050</a>
+            <a href="tel:+923049496641" className="text-gray-400">+92 304 9496641</a>
           </div>
           <div className="flex items-center gap-2">
             <FaEnvelope size={16} />
