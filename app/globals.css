@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+    --color-primary: #38bdf8;
+    --color-secondary: #0284c7;
+    --color-tertiary: #0369a1;
+    --color-navbar: #121212;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1280px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111827;
+    color: #ffffff;
+}
+
+@layer utilities {
+    .navbar-li {
+        @apply text-white hover:text-primary hover:underline transition duration-300;
+    }
+}
