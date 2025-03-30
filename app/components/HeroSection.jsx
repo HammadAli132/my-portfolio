@@ -6,7 +6,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 function HeroSection() {
   return (
-    <section className="px-4 py-20">
+    <section className="px-4 py-20 bg-gradient-to-b from-[#111827] to-[#1d2735] relative">
       <motion.div
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
@@ -20,7 +20,12 @@ function HeroSection() {
             Elevate Your Ideas with <br />
             <span className="text-primary">
               <Typewriter
-                words={[" Software Engineer", " Full-Stack Developer", " Problem Solver", " Innovator"]}
+                words={[
+                  " Software Engineer",
+                  " Full-Stack Developer",
+                  " Problem Solver",
+                  " Innovator",
+                ]}
                 loop={true}
                 cursor
                 cursorStyle="|"
@@ -32,7 +37,10 @@ function HeroSection() {
           </h1>
           {/* Brief intro */}
           <p className="mt-4 text-gray-300 text-lg">
-            Hi, I'm <span className="font-semibold">Hammad Ali</span>, a passionate Software Engineer dedicated to building efficient, scalable, and innovative solutions. I love solving complex problems, optimizing performance, and turning ideas into reality through code.
+            Hi, I'm <span className="font-semibold">Hammad Ali</span>, a
+            passionate Software Engineer dedicated to building efficient,
+            scalable, and innovative solutions. I love solving complex problems,
+            optimizing performance, and turning ideas into reality through code.
           </p>
 
           {/* CTA Buttons */}
@@ -59,11 +67,11 @@ function HeroSection() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
           className="md:w-1/2 flex justify-center"
         >
-          <Image 
-            src="/profile.png" 
+          <Image
+            src="/profile.png"
             alt="Hammad Ali - Software Engineer"
-            width={350} 
-            height={350} 
+            width={350}
+            height={350}
             className="rounded-lg shadow-lg"
           />
         </motion.div>
