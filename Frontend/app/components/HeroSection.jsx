@@ -6,7 +6,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 function HeroSection() {
   return (
-    <section className="px-4 py-20 bg-gradient-to-b from-[#111827] to-[#1d2735] relative">
+    <section id="about" className="px-4 py-20 bg-gradient-to-b from-[#111827] to-[#1d2735] relative">
       <motion.div
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}

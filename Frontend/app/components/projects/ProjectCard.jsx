@@ -8,8 +8,8 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 function ProjectCard({ image, title, description, techLogos, link, github }) {
   return (
-    <CardContainer className="inter-var">
-      <CardBody className="bg-transparent relative group/card  border-white/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+    <CardContainer className="inter-var items-stretch h-full">
+      <CardBody className="bg-transparent flex flex-col relative group/card flex-grow border-white/[0.1] w-auto h-auto rounded-xl p-6 border">
 
         {/* Project Image */}
         <CardItem translateZ="100" className="w-full mb-4">
@@ -34,22 +34,22 @@ function ProjectCard({ image, title, description, techLogos, link, github }) {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-sm max-w-sm mt-2 text-white"
+          className="text-sm max-w-sm mt-2 text-white mb-6"
         >
           {description}
         </CardItem>
 
         {/* Bottom Row: Tech Logos & Links */}
-        <div className="flex justify-between items-center mt-6">
+        <div className="flex justify-between items-center gap-6 mt-auto">
           {/* Technology Logos */}
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {techLogos.map((logo, index) => (
               <Image key={index} src={logo} alt="Tech Logo" width={30} height={30} />
             ))}
           </div>
 
           {/* View Project & GitHub Links */}
-          <div className="flex gap-2">
+          <div className="flex md:flex-row flex-col-reverse gap-2">
             {github && (
               <CardItem
                 translateZ={20}
@@ -61,15 +61,17 @@ function ProjectCard({ image, title, description, techLogos, link, github }) {
                 GitHub <FaGithub size={14} />
               </CardItem>
             )}
-            <CardItem
-              translateZ={20}
-              as={Link}
-              href={link}
-              target="_blank"
-              className="px-4 py-2 flex items-center gap-2 rounded-xl bg-secondary hover:bg-tertiary text-white text-xs font-bold"
-            >
-              View <FaExternalLinkAlt size={14} />
-            </CardItem>
+            {link && (
+              <CardItem
+                translateZ={20}
+                as={Link}
+                href={link}
+                target="_blank"
+                className="px-4 py-2 flex items-center gap-2 rounded-xl bg-secondary hover:bg-tertiary text-white text-xs font-bold"
+                >
+                View <FaExternalLinkAlt size={14} />
+              </CardItem>
+            )}
           </div>
         </div>
       </CardBody>
