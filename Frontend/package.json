@@ -33,6 +33,9 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/estree": "^1.0.7",
+    "@types/json-schema": "^7.0.15",
+    "@types/webxr": "^0.5.21",
     "eslint": "^9",
     "eslint-config-next": "15.2.4"
   }

@@ -25,6 +25,8 @@ function MobileMenu() {
             <li><Link href="/" className="navbar-li text-white" onClick={() => setIsOpen(false)}>Home</Link></li>
             <li><Link href="#about" className="navbar-li text-white" onClick={() => setIsOpen(false)}>About</Link></li>
             <li><Link href="#projects" className="navbar-li text-white" onClick={() => setIsOpen(false)}>Projects</Link></li>
+            <li><Link href="#skills" className="navbar-li text-white" onClick={() => setIsOpen(false)}>Skills</Link></li>
+            <li><Link href="#technologies" className="navbar-li text-white" onClick={() => setIsOpen(false)}>Technologies</Link></li>
             <li><Link href="#contact" className="navbar-li text-white" onClick={() => setIsOpen(false)}>Contact</Link></li>
           </ul>
         </nav>

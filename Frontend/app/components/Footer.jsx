@@ -33,6 +33,8 @@ function Footer() {
           <Link href="/" className="text-gray-400 hover:text-white transition">Home</Link>
           <Link href="#about" className="text-gray-400 hover:text-white transition">About</Link>
           <Link href="#projects" className="text-gray-400 hover:text-white transition">Projects</Link>
+          <Link href="#skills" className="text-gray-400 hover:text-white transition">Skills</Link>
+          <Link href="#technologies" className="text-gray-400 hover:text-white transition">Technologies</Link>
           <Link href="#contact" className="text-gray-400 hover:text-white transition">Contact</Link>
         </div>
 

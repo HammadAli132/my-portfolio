@@ -45,7 +45,7 @@ async function TechSection() {
   const techCategories = await fetchTechnologies();
 
   return (
-    <section id="tech" className="py-20 px-4 bg-[#111827]">
+    <section id="technologies" className="py-20 px-4 bg-[#111827]">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-2xl md:text-3xl font-extrabold text-white">
           My <span className="text-primary">Tech Stack</span>
