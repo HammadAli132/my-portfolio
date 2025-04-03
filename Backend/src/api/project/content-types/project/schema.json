@@ -28,16 +28,22 @@
     "Description": {
       "type": "richtext"
     },
-    "TechStack": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.media"
-    },
     "LiveURL": {
       "type": "string"
     },
     "GithubURL": {
       "type": "string"
+    },
+    "TechStackLogos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

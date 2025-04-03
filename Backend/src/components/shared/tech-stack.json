@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_tech_stacks",
+  "info": {
+    "displayName": "TechStack"
+  },
+  "options": {},
+  "attributes": {
+    "Logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

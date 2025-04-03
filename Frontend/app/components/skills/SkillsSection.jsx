@@ -26,10 +26,10 @@ export default async function SkillsSection() {
 
   return (
     <section id="skills" className="px-4 py-20 relative bg-[#1d2735]">
-      <div className="flex flex-col justify-between items-center gap-12 md:max-w-4/6 mx-auto">
+      <div className="flex flex-col justify-between items-center gap-12 lg:max-w-4/6 mx-auto">
         <div className="text-center flex flex-col gap-4">
           <h1 className="text-2xl md:text-3xl font-extrabold leading-tight">
-            <span className="text-primary">Versatile Expertise,</span> Cutting-Edge Skills
+            Versatile Expertise,<span className="text-primary"> Cutting-Edge Skills</span>
           </h1>
           <p className="text-lg md:max-w-5/6 mx-auto">
             A showcase of my technical proficiencies, spanning various technologies and frameworks. 
