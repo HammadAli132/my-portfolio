@@ -2,7 +2,11 @@ import React from 'react'
 
 function TechSection() {
   return (
-    <div>TechSection</div>
+    <section>
+      <div>
+        
+      </div>
+    </section>
   )
 }
 
