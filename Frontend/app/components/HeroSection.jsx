@@ -72,7 +72,6 @@ function HeroSection() {
             alt="Hammad Ali - Software Engineer"
             width={350}
             height={350}
-            className="rounded-lg shadow-lg"
           />
         </motion.div>
       </motion.div>
