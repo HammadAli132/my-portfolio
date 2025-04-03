@@ -6,11 +6,11 @@ async function getProjects() {
     const res = await fetch(`${process.env.BACKEND_URL}/api/projects?populate=*`, {
       cache: "no-store", // Ensures fresh data on each request
     });
-    
+
     if (!res.ok) {
       throw new Error("Failed to fetch projects");
     }
-    
+
     const data = await res.json();
     return data.data;
   } catch (error) {
@@ -21,6 +21,7 @@ async function getProjects() {
 
 export default async function ProjectSection() {
   const backendUrl = process.env.BACKEND_URL;
+  const isDevMode = process.env.DEV_MODE === "true"; // Check if DEV_MODE is true or false
   const projects = await getProjects();
 
   return (
@@ -38,14 +39,21 @@ export default async function ProjectSection() {
         <div id="grid" className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6 w-full">
           {projects.length > 0 ? (
             projects.map((project) => {
+              // Conditional image URL for the project image
               const imageUrl = project.ProjectImage?.url
-                ? `${backendUrl}${project.ProjectImage.url}`
+                ? !isDevMode && backendUrl 
+                  ? `${backendUrl}${project.ProjectImage.url}` 
+                  : project.ProjectImage.url 
                 : "/test.webp";
 
-              // Extract tech stack logos
-              const techLogos = project.TechStackLogos?.map(tech =>
-                tech.url ? `${backendUrl}${tech.url}` : "/default-logo.jpg"
-              ) || [];
+              // Conditional image URLs for tech stack logos
+              const techLogos = project.TechStackLogos?.map(tech => {
+                let techUrl = tech.url ? tech.url : "/default-logo.jpg";
+                if (!isDevMode && backendUrl) {
+                  techUrl = `${backendUrl}${techUrl}`;
+                }
+                return techUrl;
+              }) || [];
 
               return (
                 <ProjectCard
@@ -67,4 +75,3 @@ export default async function ProjectSection() {
     </section>
   );
 }
-

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SkillsCard = ({ title, logo, skills }) => {
   return (
-    <CardSpotlight className="h-96 w-auto p-6">
+    <CardSpotlight className="h-96 w-auto p-6 max-w-[500px]">
       {/* Title & Logo */}
       <div className="flex items-center gap-3 relative z-20">
         <Image src={logo} alt={`${title} Logo`} width={40} height={40} />

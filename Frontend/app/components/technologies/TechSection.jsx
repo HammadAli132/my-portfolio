@@ -25,7 +25,7 @@ async function TechSection() {
 
           technologies.forEach((techItem) => {
             if (techItem.url) {
-              categoriesMap.get(category).push(`${process.env.BACKEND_URL}${techItem.url}`);
+              categoriesMap.get(category).push(techItem.url);
             }
           });
         }
@@ -43,6 +43,8 @@ async function TechSection() {
   };
 
   const techCategories = await fetchTechnologies();
+  const isDevMode = process.env.DEV_MODE === "true"; // Check if DEV_MODE is true or false
+  const backendUrl = process.env.BACKEND_URL;
 
   return (
     <section id="technologies" className="py-20 px-4 bg-[#111827]">
@@ -58,7 +60,14 @@ async function TechSection() {
         <div className="mt-10 flex flex-col gap-6">
           {techCategories.length > 0 ? (
             techCategories.map((group, index) => (
-              <TechnologyGroup key={index} category={group.category} technologies={group.technologies} />
+              <TechnologyGroup
+                key={index}
+                category={group.category}
+                technologies={group.technologies.map((techUrl) => {
+                  // Prepend the backend URL if DEV_MODE is false
+                  return !isDevMode && backendUrl ? `${backendUrl}${techUrl}` : techUrl;
+                })}
+              />
             ))
           ) : (
             <p className="text-gray-400 col-span-full">No technologies found.</p>
