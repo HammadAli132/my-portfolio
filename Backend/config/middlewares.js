@@ -16,7 +16,7 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['https://my-portfolio-seven-woad-93.vercel.app/'], // Replace with your frontend's URL
+      origin: ['https://hammadali132.vercel.app/'], // Replace with your frontend's URL
     },
   },
   'strapi::poweredBy',
