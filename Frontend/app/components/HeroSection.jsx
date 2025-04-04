@@ -73,6 +73,7 @@ function HeroSection() {
             width={350}
             height={350}
             className="rounded-full shadow-lg"
+            priority
           />
         </motion.div>
       </motion.div>
