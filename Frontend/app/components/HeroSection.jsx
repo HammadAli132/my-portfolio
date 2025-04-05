@@ -8,7 +8,7 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 function HeroSection() {
   const handleDownload = async () => {
-    const url = process.env.NEXT_PUBLIC_DEV_MODE
+    const url = process.env.NEXT_PUBLIC_DEV_MODE === "true"
       ? `${process.env.NEXT_PUBLIC_BACKEND_URL}/uploads/My_Resume_8da822feca.pdf`
       : `${process.env.NEXT_PUBLIC_BACKEND_URL}/My_Resume_18fb3ac942.pdf`;
   
