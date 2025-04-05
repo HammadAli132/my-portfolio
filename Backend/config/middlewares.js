@@ -4,27 +4,25 @@ module.exports = [
   {
     name: 'strapi::security',
     config: {
-      contentSecurityPolicy: {
-        directives: {
-          'connect-src': ["'self'", 'https:'],
-        },
-      },
-    },
+      contentSecurityPolicy: false,
+      cors: {
+        origin: ['https://hammadali132.vercel.app', 'http://localhost:3000']
+      }
+    }
   },
   {
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: [
-        'https://hammadali132.vercel.app/',
-        'http://localhost:3000',
-      ],
-    },
+      headers: ['*'],
+      origin: ['https://hammadali132.vercel.app', 'http://localhost:3000'],
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS']
+    }
   },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
   'strapi::session',
   'strapi::favicon',
-  'strapi::public',
+  'strapi::public'
 ];
