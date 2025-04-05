@@ -8,28 +8,52 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 function HeroSection() {
   const handleDownload = async () => {
-    const url = process.env.NEXT_PUBLIC_DEV_MODE === "true"
-      ? `${process.env.NEXT_PUBLIC_BACKEND_URL}/uploads/My_Resume_8da822feca.pdf`
-      : `${process.env.NEXT_PUBLIC_BACKEND_URL}/My_Resume_18fb3ac942.pdf`;
+    try {
+      const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/my-resumes?populate=*`;
+      
+      const response = await fetch(url);
   
-    const response = await fetch(url);
-
-    console.log("Response:", response);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
   
-    if (!response.ok) {
-      alert("Failed to download resume.");
-      return;
+      const { data } = await response.json();
+      
+      // Check if data exists and has at least one item with Resume
+      if (!data || !data.length || !data[0].Resume) {
+        throw new Error("No resume data found");
+      }
+  
+      const resume = data[0].Resume;
+      const pdfUrl = `${process.env.NEXT_PUBLIC_BACKEND_URL}${resume.url}`;
+      
+      // Fetch the PDF file
+      const pdfResponse = await fetch(pdfUrl);
+      
+      if (!pdfResponse.ok) {
+        throw new Error("Failed to fetch PDF file");
+      }
+  
+      const blob = await pdfResponse.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      
+      // Create download link
+      const a = document.createElement("a");
+      a.href = blobUrl;
+      a.download = "HammadAliResume.pdf"; // Use filename from API or fallback
+      document.body.appendChild(a);
+      a.click();
+      
+      // Cleanup
+      setTimeout(() => {
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(blobUrl);
+      }, 100);
+      
+    } catch (error) {
+      console.error("Download failed:", error);
+      alert(`Failed to download resume: ${error.message}`);
     }
-  
-    const blob = await response.blob();
-    const blobUrl = window.URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = blobUrl;
-    a.download = "HammadAliResume.pdf";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    window.URL.revokeObjectURL(blobUrl);
   };
   
 

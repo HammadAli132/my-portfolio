@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "my_resumes",
+  "info": {
+    "singularName": "my-resume",
+    "pluralName": "my-resumes",
+    "displayName": "My Resume"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Resume": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
