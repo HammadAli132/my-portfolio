@@ -7,7 +7,6 @@ module.exports = [
       contentSecurityPolicy: {
         directives: {
           'connect-src': ["'self'", 'https:'],
-          // Add other directives as needed
         },
       },
     },
@@ -16,7 +15,10 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['https://hammadali132.vercel.app/'], // Replace with your frontend's URL
+      origin: [
+        'https://hammadali132.vercel.app/',
+        'http://localhost:3000',
+      ],
     },
   },
   'strapi::poweredBy',

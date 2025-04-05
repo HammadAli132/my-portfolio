@@ -65,7 +65,7 @@ async function TechSection() {
                 category={group.category}
                 technologies={group.technologies.map((techUrl) => {
                   // Prepend the backend URL if DEV_MODE is false
-                  return !isDevMode && backendUrl ? `${backendUrl}${techUrl}` : techUrl;
+                  return isDevMode && backendUrl ? `${backendUrl}${techUrl}` : techUrl;
                 })}
               />
             ))

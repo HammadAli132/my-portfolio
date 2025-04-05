@@ -44,7 +44,7 @@ export default async function SkillsSection() {
               let imageUrl = skill.Logo?.url ? skill.Logo.url : "/default-skill-logo.svg";
               
               // Conditionally prepend the backend URL if DEV_MODE is false
-              if (!isDevMode && backendUrl) {
+              if (isDevMode && backendUrl) {
                 imageUrl = `${backendUrl}${imageUrl}`;
               }
 

@@ -3,8 +3,36 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { FiDownload } from "react-icons/fi";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 function HeroSection() {
+  const handleDownload = async () => {
+    const url = process.env.NEXT_PUBLIC_DEV_MODE
+      ? `${process.env.NEXT_PUBLIC_BACKEND_URL}/uploads/My_Resume_8da822feca.pdf`
+      : `${process.env.NEXT_PUBLIC_BACKEND_URL}/My_Resume_18fb3ac942.pdf`;
+  
+    const response = await fetch(url);
+
+    console.log("Response:", response);
+  
+    if (!response.ok) {
+      alert("Failed to download resume.");
+      return;
+    }
+  
+    const blob = await response.blob();
+    const blobUrl = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = blobUrl;
+    a.download = "HammadAliResume.pdf";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.URL.revokeObjectURL(blobUrl);
+  };
+  
+
   return (
     <section id="about" className="px-4 py-20 bg-gradient-to-b from-[#111827] to-[#1d2735] relative">
       <motion.div
@@ -37,7 +65,7 @@ function HeroSection() {
           <p className="mt-4 text-gray-300 text-lg">
             Hi, I'm <span className="font-semibold">Hammad Ali</span>, a passionate Software Engineer dedicated to building efficient, scalable, and innovative solutions.
           </p>
-          <div className="mt-6 flex flex-col md:flex-row gap-4">
+          <div className="mt-6 flex flex-col md:flex-row md:flex-wrap gap-4">
             <a
               href="#projects"
               className="py-3 px-5 bg-secondary rounded-md hover:bg-tertiary transition text-white text-lg font-semibold"
@@ -50,6 +78,15 @@ function HeroSection() {
             >
               Get In Touch
             </a>
+            <HoverBorderGradient
+              containerClassName="rounded-md"
+              as="button"
+              onClick={handleDownload}
+              className="flex items-center space-x-2 px-5 py-3 text-lg font-semibold cursor-pointer"
+            >
+              <FiDownload className="w-5 h-5" />
+              <span>Download Resume</span>
+            </HoverBorderGradient>
           </div>
         </div>
 

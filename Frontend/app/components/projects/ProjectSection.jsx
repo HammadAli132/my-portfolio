@@ -41,7 +41,7 @@ export default async function ProjectSection() {
             projects.map((project) => {
               // Conditional image URL for the project image
               const imageUrl = project.ProjectImage?.url
-                ? !isDevMode && backendUrl 
+                ? isDevMode && backendUrl 
                   ? `${backendUrl}${project.ProjectImage.url}` 
                   : project.ProjectImage.url 
                 : "/test.webp";
@@ -49,7 +49,7 @@ export default async function ProjectSection() {
               // Conditional image URLs for tech stack logos
               const techLogos = project.TechStackLogos?.map(tech => {
                 let techUrl = tech.url ? tech.url : "/default-logo.jpg";
-                if (!isDevMode && backendUrl) {
+                if (isDevMode && backendUrl) {
                   techUrl = `${backendUrl}${techUrl}`;
                 }
                 return techUrl;
