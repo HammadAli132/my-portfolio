@@ -52,22 +52,22 @@ function ProjectCard({ image, title, description, techLogos, link, github }) {
           <div className="flex md:flex-row flex-col-reverse gap-2">
             {github && (
               <CardItem
-                translateZ={20}
+                translateZ={200}
                 as={Link}
                 href={github}
                 target="_blank"
-                className="px-4 py-2 flex items-center gap-2 rounded-xl bg-gray-700 hover:bg-gray-600 text-white text-xs font-bold"
+                className="px-4 py-2 flex items-center gap-2 rounded-xl bg-gray-700 hover:bg-gray-600 cursor-pointer text-white text-xs font-bold"
               >
                 GitHub <FaGithub size={14} />
               </CardItem>
             )}
             {link && (
               <CardItem
-                translateZ={20}
+                translateZ={200}
                 as={Link}
                 href={link}
                 target="_blank"
-                className="px-4 py-2 flex items-center gap-2 rounded-xl bg-secondary hover:bg-tertiary text-white text-xs font-bold"
+                className="px-4 py-2 flex items-center gap-2 rounded-xl bg-secondary hover:bg-tertiary cursor-pointer text-white text-xs font-bold"
                 >
                 View <FaExternalLinkAlt size={14} />
               </CardItem>
