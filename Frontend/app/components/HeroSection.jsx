@@ -25,7 +25,7 @@ function HeroSection() {
       }
   
       const resume = data[0].Resume;
-      const pdfUrl = `${process.env.NEXT_PUBLIC_BACKEND_URL}${resume.url}`;
+      const pdfUrl = process.env.NEXT_PUBLIC_DEV_MODE === "true" ? `${process.env.NEXT_PUBLIC_BACKEND_URL}${resume.url}` : `${resume.url}`;
       
       // Fetch the PDF file
       const pdfResponse = await fetch(pdfUrl);
