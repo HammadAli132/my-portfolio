@@ -15,7 +15,6 @@ function HeroSection() {
       >
         {/* Left part: Title, brief intro, CTA Buttons */}
         <div className="text-center md:text-left md:w-1/2">
-          {/* Title */}
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
             Elevate Your Ideas with <br />
             <span className="text-primary">
@@ -35,15 +34,9 @@ function HeroSection() {
               />
             </span>
           </h1>
-          {/* Brief intro */}
           <p className="mt-4 text-gray-300 text-lg">
-            Hi, I'm <span className="font-semibold">Hammad Ali</span>, a
-            passionate Software Engineer dedicated to building efficient,
-            scalable, and innovative solutions. I love solving complex problems,
-            optimizing performance, and turning ideas into reality through code.
+            Hi, I'm <span className="font-semibold">Hammad Ali</span>, a passionate Software Engineer dedicated to building efficient, scalable, and innovative solutions.
           </p>
-
-          {/* CTA Buttons */}
           <div className="mt-6 flex flex-col md:flex-row gap-4">
             <a
               href="#projects"
@@ -60,19 +53,18 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* Right part: Image */}
+        {/* Right part: Optimized Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-          className="md:w-1/2 flex justify-center"
+          className="md:w-[25rem] md:h-[25rem] w-[20rem] h-[20rem] relative flex justify-center rounded-full shadow-lg overflow-hidden"
         >
           <Image
-            src="/profile.png"
-            alt="Hammad Ali - Software Engineer"
-            width={350}
-            height={350}
-            className="rounded-full shadow-lg"
+            src="/profile.jpeg"
+            alt="Profile image of Hammad Ali"
+            fill // This makes the image fill its container
+            style={{ objectFit: "cover" }} // Optional: adjust how the image fills the container
             priority
           />
         </motion.div>

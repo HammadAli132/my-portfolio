@@ -4,20 +4,22 @@ import Image from "next/image";
 
 const SkillsCard = ({ title, logo, skills }) => {
   return (
-    <CardSpotlight className="h-96 w-auto p-6 max-w-[500px]">
-      {/* Title & Logo */}
-      <div className="flex items-center gap-3 relative z-20">
-        <Image src={logo} alt={`${title} Logo`} width={40} height={40} />
-        <p className="text-xl font-bold text-white">{title}</p>
-      </div>
-      
-      {/* Skills List */}
-      <ul className="text-neutral-200 mt-4 relative z-20 list-none">
-        {skills.map((skill, index) => (
-          <SkillItem key={index} title={skill} />
-        ))}
-      </ul>
-    </CardSpotlight>
+    <div className="flex justify-center items-center w-auto h-auto">
+      <CardSpotlight className="h-96 w-full p-6 max-w-[500px]">
+        {/* Title & Logo */}
+        <div className="flex items-center gap-3 relative z-20">
+          <Image src={logo} alt={`${title} Logo`} width={40} height={40} />
+          <p className="text-xl font-bold text-white">{title}</p>
+        </div>
+        
+        {/* Skills List */}
+        <ul className="text-neutral-200 mt-4 relative z-20 list-none">
+          {skills.map((skill, index) => (
+            <SkillItem key={index} title={skill} />
+          ))}
+        </ul>
+      </CardSpotlight>
+    </div>
   );
 };
 

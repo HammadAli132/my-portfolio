@@ -8,7 +8,7 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 function ProjectCard({ image, title, description, techLogos, link, github }) {
   return (
-    <CardContainer className="inter-var items-stretch h-full">
+    <CardContainer className="inter-var items-stretch h-full w-full max-w-[500px]">
       <CardBody className="bg-transparent flex flex-col relative group/card flex-grow border-white/[0.1] w-auto h-auto rounded-xl p-6 border">
 
         {/* Project Image */}
