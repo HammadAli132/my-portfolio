@@ -1,13 +1,17 @@
 "use client";
 
 import { useProjects } from "@/app/contexts/ProjectContext";
+import { TbExternalLink } from "react-icons/tb";
 import ProjectCard from "./ProjectCard";
 import "dotenv/config";
+import Link from "next/link";
 
 export default function ProjectSection() {
-  const backendUrl = process.env.BACKEND_URL;
-  const isDevMode = process.env.DEV_MODE === "true"; // Check if DEV_MODE is true or false
-  const projects = useProjects();
+  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+  const isDevMode = process.env.NEXT_PUBLIC_DEV_MODE === "true"; // Check if DEV_MODE is true or false
+  const { projects } = useProjects();
+
+  const featuredProjects = projects.filter((project) => project.isFeatured);
 
   return (
     <section id="projects" className="px-4 py-20 relative">
@@ -22,8 +26,8 @@ export default function ProjectSection() {
           </p>
         </div>
         <div id="grid" className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6 w-full">
-          {projects.length > 0 ? (
-            projects.map((project) => {
+          {featuredProjects.length > 0 ? (
+            featuredProjects.map((project) => {
               // Conditional image URL for the project image
               const imageUrl = project.ProjectImage?.url
                 ? isDevMode && backendUrl 
@@ -54,9 +58,12 @@ export default function ProjectSection() {
               );
             })
           ) : (
-            <p>No projects found.</p>
+            <p>No featured projects found.</p>
           )}
         </div>
+        <Link href={"/projects"} className="text-lg text-primary hover:underline self-end">
+          Explore All Projects<TbExternalLink className="inline-block ml-1" />
+        </Link>
       </div>
     </section>
   );

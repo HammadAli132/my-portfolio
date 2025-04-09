@@ -27,6 +27,16 @@ main {
     flex: 1;
 }
 
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
 @layer utilities {
     .navbar-li {
         @apply text-white hover:text-primary hover:underline transition duration-300;
