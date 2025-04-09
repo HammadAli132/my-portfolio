@@ -4,10 +4,13 @@ import React, { useState, useMemo, useEffect } from "react";
 import { useProjects } from "../contexts/ProjectContext";
 import ProjectCard from "../components/projects/ProjectCard";
 import { motion, AnimatePresence } from "framer-motion";
-import Lottie from "lottie-react";
 import dynamic from "next/dynamic";
 
 const CustomDropdown = dynamic(() => import("../components/CustomDropdown"), {
+  ssr: false,
+});
+
+const Lottie = dynamic(() => import("lottie-react"), {
   ssr: false,
 });
 
