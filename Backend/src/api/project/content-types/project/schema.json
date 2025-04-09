@@ -44,6 +44,15 @@
         "videos",
         "audios"
       ]
+    },
+    "isFeatured": {
+      "type": "boolean"
+    },
+    "project_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "projects"
     }
   }
 }

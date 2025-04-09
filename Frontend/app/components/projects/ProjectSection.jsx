@@ -64,6 +64,7 @@ export default async function ProjectSection() {
                   techLogos={techLogos}
                   link={project.LiveURL}
                   github={project.GithubURL}
+                  isFeatured={project.isFeatured}
                 />
               );
             })

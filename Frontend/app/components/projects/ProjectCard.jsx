@@ -6,23 +6,30 @@ import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-function ProjectCard({ image, title, description, techLogos, link, github }) {
+function ProjectCard({ image, title, description, techLogos, link, github, isFeatured }) {
   return (
     <CardContainer className="inter-var items-stretch h-full w-full max-w-[500px]">
       <CardBody className="bg-transparent flex flex-col relative group/card flex-grow border-white/[0.1] w-auto h-auto rounded-xl p-6 border">
 
-        {/* Project Image */}
-        <CardItem translateZ="100" className="w-full mb-4">
-          <Image
-            src={image}
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt={title}
-          />
-        </CardItem>
+        {/* Project Image Container with Featured Tag */}
+        <div className="relative w-full mb-4">
+          {isFeatured && (
+            <span className="absolute top-2 left-2 z-10 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+              Featured
+            </span>
+          )}
+          <CardItem translateZ="100">
+            <Image
+              src={image}
+              height="1000"
+              width="1000"
+              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+              alt={title}
+            />
+          </CardItem>
+        </div>
 
-        {/* Project Title */}
+        {/* Title */}
         <CardItem
           translateZ="50"
           className="text-xl font-bold text-primary"
@@ -30,7 +37,7 @@ function ProjectCard({ image, title, description, techLogos, link, github }) {
           {title}
         </CardItem>
 
-        {/* Project Description */}
+        {/* Description */}
         <CardItem
           as="p"
           translateZ="60"
@@ -39,16 +46,13 @@ function ProjectCard({ image, title, description, techLogos, link, github }) {
           {description}
         </CardItem>
 
-        {/* Bottom Row: Tech Logos & Links */}
+        {/* Bottom Row */}
         <div className="flex justify-between items-center gap-6 mt-auto">
-          {/* Technology Logos */}
           <div className="flex flex-wrap gap-2">
             {techLogos.map((logo, index) => (
               <Image key={index} src={logo} alt="Tech Logo" width={30} height={30} />
             ))}
           </div>
-
-          {/* View Project & GitHub Links */}
           <div className="flex md:flex-row flex-col-reverse gap-2">
             {github && (
               <CardItem
@@ -68,7 +72,7 @@ function ProjectCard({ image, title, description, techLogos, link, github }) {
                 href={link}
                 target="_blank"
                 className="px-4 py-2 flex items-center gap-2 rounded-xl bg-secondary hover:bg-tertiary cursor-pointer text-white text-xs font-bold"
-                >
+              >
                 View <FaExternalLinkAlt size={14} />
               </CardItem>
             )}
