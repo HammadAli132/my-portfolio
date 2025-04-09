@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect, Fragment } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { useProjects } from "../contexts/ProjectContext";
 import ProjectCard from "../components/projects/ProjectCard";
 import { motion, AnimatePresence } from "framer-motion";

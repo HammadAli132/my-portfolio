@@ -4,9 +4,7 @@ async function TechSection() {
   // Fetch data from API
   const fetchTechnologies = async () => {
     try {
-      const res = await fetch(`${process.env.BACKEND_URL}/api/technologies?populate=*`, {
-        cache: "no-store", // Ensures fresh data
-      });
+      const res = await fetch(`${process.env.BACKEND_URL}/api/technologies?populate=*`);
       if (!res.ok) throw new Error("Failed to fetch technologies");
 
       const data = await res.json();

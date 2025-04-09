@@ -4,9 +4,7 @@ import "dotenv/config";
 
 async function getSkills() {
   try {
-    const res = await fetch(`${process.env.BACKEND_URL}/api/skills?populate=*`, {
-      cache: "no-store", // Ensures fresh data on each request
-    });
+    const res = await fetch(`${process.env.BACKEND_URL}/api/skills?populate=*`);
 
     if (!res.ok) {
       throw new Error("Failed to fetch skills");
