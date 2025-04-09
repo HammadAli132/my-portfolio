@@ -1,28 +1,13 @@
+"use client";
+
+import { useProjects } from "@/app/contexts/ProjectContext";
 import ProjectCard from "./ProjectCard";
 import "dotenv/config";
 
-async function getProjects() {
-  try {
-    const res = await fetch(`${process.env.BACKEND_URL}/api/projects?populate=*`, {
-      cache: "no-store", // Ensures fresh data on each request
-    });
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch projects");
-    }
-
-    const data = await res.json();
-    return data.data;
-  } catch (error) {
-    console.error("Error fetching projects:", error);
-    return [];
-  }
-}
-
-export default async function ProjectSection() {
+export default function ProjectSection() {
   const backendUrl = process.env.BACKEND_URL;
   const isDevMode = process.env.DEV_MODE === "true"; // Check if DEV_MODE is true or false
-  const projects = await getProjects();
+  const projects = useProjects();
 
   return (
     <section id="projects" className="px-4 py-20 relative">
