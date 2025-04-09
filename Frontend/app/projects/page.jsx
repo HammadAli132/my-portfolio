@@ -134,11 +134,13 @@ function ProjectPage() {
                 return (
                   <motion.div
                     key={project.id}
-                    layout
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20, scale: 1 }} // Initial state with default scale
+                    animate={{ opacity: 1, y: 0, scale: 1 }} // End state with default scale
                     exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{
+                      duration: 0.3,
+                      scale: { type: "spring", stiffness: 300, damping: 25 }, // Control scale animation
+                    }}
                   >
                     <ProjectCard
                       image={imageUrl}
@@ -150,6 +152,7 @@ function ProjectPage() {
                       isFeatured={project.isFeatured}
                     />
                   </motion.div>
+
                 );
               })
             ) : (
