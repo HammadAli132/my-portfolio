@@ -5,7 +5,11 @@ import { useProjects } from "../contexts/ProjectContext";
 import ProjectCard from "../components/projects/ProjectCard";
 import { motion, AnimatePresence } from "framer-motion";
 import Lottie from "lottie-react";
-import CustomDropdown from "../components/CustomDropdown";
+import dynamic from "next/dynamic";
+
+const CustomDropdown = dynamic(() => import("../components/CustomDropdown"), {
+  ssr: false,
+});
 
 function ProjectPage() {
   const { projects, categories } = useProjects();
