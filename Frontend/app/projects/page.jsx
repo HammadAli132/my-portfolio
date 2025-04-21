@@ -116,11 +116,19 @@ function ProjectPage() {
                 const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
                 const isDevMode = process.env.NEXT_PUBLIC_DEV_MODE === "true";
 
-                const imageUrl = project.ProjectImage?.url
-                  ? isDevMode && backendUrl
-                    ? `${backendUrl}${project.ProjectImage.url}`
-                    : project.ProjectImage.url
-                  : "/test.webp";
+                const urls = project.ProjectImages?.map((img) => img.url);
+                let imageUrls = [];
+
+                if (!urls || urls.length === 0) {  
+                  imageUrls = ["/default-image.jpg"];
+                } else {
+                  imageUrls = urls.map((url) => {
+                    if (isDevMode && backendUrl) {
+                      return `${backendUrl}${url}`;
+                    }
+                    return url;
+                  });
+                }
 
                 const techLogos =
                   project.TechStackLogos?.map((tech) => {
@@ -143,7 +151,7 @@ function ProjectPage() {
                     }}
                   >
                     <ProjectCard
-                      image={imageUrl}
+                      images={imageUrls}
                       title={project.Title}
                       description={project.Description}
                       techLogos={techLogos}

@@ -43,8 +43,6 @@ export default function ProjectSection() {
                 });
               }
 
-              console.log("Image URLs:", imageUrls);
-
               // Conditional image URLs for tech stack logos
               const techLogos = project.TechStackLogos?.map(tech => {
                 let techUrl = tech.url ? tech.url : "/default-logo.jpg";
