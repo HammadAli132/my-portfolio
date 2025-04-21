@@ -120,7 +120,7 @@ function ProjectPage() {
                 let imageUrls = [];
 
                 if (!urls || urls.length === 0) {  
-                  imageUrls = ["/default-image.jpg"];
+                  imageUrls = ["/projectCardImages/default1.webp"];
                 } else {
                   imageUrls = urls.map((url) => {
                     if (isDevMode && backendUrl) {
