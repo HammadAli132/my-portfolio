@@ -14,9 +14,9 @@
     "Title": {
       "type": "string"
     },
-    "ProjectImage": {
+    "ProjectImages": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images",

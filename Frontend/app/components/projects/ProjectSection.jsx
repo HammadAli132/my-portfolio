@@ -25,15 +25,25 @@ export default function ProjectSection() {
             From seamless user experiences to powerful backend systems, these works highlight my passion for building <span className="font-bold text-primary">scalable, efficient, and innovative solutions.</span>
           </p>
         </div>
-        <div id="grid" className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6 w-full">
+        <div id="grid" className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6 w-full relative">
           {featuredProjects.length > 0 ? (
             featuredProjects.map((project) => {
               // Conditional image URL for the project image
-              const imageUrl = project.ProjectImage?.url
-                ? isDevMode && backendUrl 
-                  ? `${backendUrl}${project.ProjectImage.url}` 
-                  : project.ProjectImage.url 
-                : "/test.webp";
+              const urls = project.ProjectImages?.map((img) => img.url);
+              let imageUrls = [];
+
+              if (!urls || urls.length === 0) {  
+                imageUrls = ["/default-image.jpg"];
+              } else {
+                imageUrls = urls.map((url) => {
+                  if (isDevMode && backendUrl) {
+                    return `${backendUrl}${url}`;
+                  }
+                  return url;
+                });
+              }
+
+              console.log("Image URLs:", imageUrls);
 
               // Conditional image URLs for tech stack logos
               const techLogos = project.TechStackLogos?.map(tech => {
@@ -47,7 +57,7 @@ export default function ProjectSection() {
               return (
                 <ProjectCard
                   key={project.id}
-                  image={imageUrl}
+                  images={imageUrls}
                   title={project.Title}
                   description={project.Description}
                   techLogos={techLogos}

@@ -456,8 +456,9 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::category.category'
     >;
-    ProjectImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
+    ProjectImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
     >;
     publishedAt: Schema.Attribute.DateTime;
     TechStackLogos: Schema.Attribute.Media<

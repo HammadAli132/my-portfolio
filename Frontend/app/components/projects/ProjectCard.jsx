@@ -5,27 +5,22 @@ import React from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import CustomSlider from "../CustomSlider";
 
-function ProjectCard({ image, title, description, techLogos, link, github, isFeatured }) {
+function ProjectCard({ images, title, description, techLogos, link, github, isFeatured }) {
   return (
-    <CardContainer className="inter-var items-stretch h-full w-full max-w-[500px]">
-      <CardBody className="bg-transparent flex flex-col relative group/card flex-grow border-white/[0.1] w-auto h-auto rounded-xl p-6 border">
+    <CardContainer className="inter-var items-stretch h-full w-full max-w-[500px] ">
+      <CardBody className="bg-transparent flex flex-col relative group/card flex-grow border-white/[0.1] w-full h-auto rounded-xl p-6 border">
 
         {/* Project Image Container with Featured Tag */}
-        <div className="relative w-full mb-4">
+        <div className="relative w-auto mb-4">
           {isFeatured && (
             <span className="absolute top-2 left-2 z-10 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
               Featured
             </span>
           )}
           <CardItem translateZ="100">
-            <Image
-              src={image}
-              height="1000"
-              width="1000"
-              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-              alt={title}
-            />
+            <CustomSlider images={images} />
           </CardItem>
         </div>
 
