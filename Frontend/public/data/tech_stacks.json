@@ -4,7 +4,16 @@
         "Category": "Frontend",
         "Technologies": [
           {
-            "url": "/uploads/nodejs_original_c9e9ed3c8d.svg"
+            "url": "/tech_logos/react-original.svg"
+          },
+          {
+            "url": "/tech_logos/mongodb-original.svg"
+          },
+          {
+            "url": "/tech_logos/express-original.svg"
+          },
+          {
+            "url": "/tech_logos/nodejs-original.svg"
           }
         ]
       }
