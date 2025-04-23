@@ -9,23 +9,24 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 function HeroSection() {
   const handleDownload = async () => {
     try {
-      const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/my-resumes?populate=*`;
+      // const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/my-resumes?populate=*`;
       
-      const response = await fetch(url);
+      // const response = await fetch(url);
   
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+      // if (!response.ok) {
+      //   throw new Error(`HTTP error! status: ${response.status}`);
+      // }
   
-      const { data } = await response.json();
+      // const { data } = await response.json();
       
-      // Check if data exists and has at least one item with Resume
-      if (!data || !data.length || !data[0].Resume) {
-        throw new Error("No resume data found");
-      }
+      // // Check if data exists and has at least one item with Resume
+      // if (!data || !data.length || !data[0].Resume) {
+      //   throw new Error("No resume data found");
+      // }
   
-      const resume = data[0].Resume;
-      const pdfUrl = process.env.NEXT_PUBLIC_DEV_MODE === "true" ? `${process.env.NEXT_PUBLIC_BACKEND_URL}${resume.url}` : `${resume.url}`;
+      // const resume = data[0].Resume;
+      // const pdfUrl = process.env.NEXT_PUBLIC_DEV_MODE === "true" ? `${process.env.NEXT_PUBLIC_BACKEND_URL}${resume.url}` : `${resume.url}`;
+      const pdfUrl = "/data/My_Resume.pdf";
       
       // Fetch the PDF file
       const pdfResponse = await fetch(pdfUrl);
