@@ -33,12 +33,17 @@ export default function ProjectSection() {
               let imageUrls = [];
 
               if (!urls || urls.length === 0) {  
-                imageUrls = ["/projectCardImages/default1.webp"];
+                imageUrls = [
+                  "/projectCardImages/defaults/default1.webp",
+                  "/projectCardImages/defaults/default2.jpg",
+                  "/projectCardImages/defaults/default3.jpg",
+                  "/projectCardImages/defaults/default4.webp"
+                ];
               } else {
                 imageUrls = urls.map((url) => {
-                  if (isDevMode && backendUrl) {
-                    return `${backendUrl}${url}`;
-                  }
+                  // if (isDevMode && backendUrl) {
+                  //   return `${backendUrl}${url}`;
+                  // }
                   return url;
                 });
               }
@@ -46,9 +51,9 @@ export default function ProjectSection() {
               // Conditional image URLs for tech stack logos
               const techLogos = project.TechStackLogos?.map(tech => {
                 let techUrl = tech.url ? tech.url : "/default-logo.jpg";
-                if (isDevMode && backendUrl) {
-                  techUrl = `${backendUrl}${techUrl}`;
-                }
+                // if (isDevMode && backendUrl) {
+                //   techUrl = `${backendUrl}${techUrl}`;
+                // }
                 return techUrl;
               }) || [];
 

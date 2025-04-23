@@ -1,34 +1,34 @@
 {
   "data": [
     {
-      "Title": "Dummy Project 1",
+      "Title": "Dummy Local Project 1",
       "Description": null,
       "LiveURL": "https://liveurl.com",
       "GithubURL": "https://github.com",
       "isFeatured": true,
       "ProjectImages": [
         {
-          "url": "/uploads/default2_1b524cdb85.jpg"
+          "url": "/projectCardImages/defaults/default1.webp"
         },
         {
-          "url": "/uploads/default3_25ccbd335b.jpg"
+          "url": "/projectCardImages/defaults/default2.jpg"
         },
         {
-          "url": "/uploads/default1_faec62c254.webp"
+          "url": "/projectCardImages/defaults/default3.jpg"
         }
       ],
       "TechStackLogos": [
         {
-          "url": "/uploads/express_original_6156626136.svg"
+          "url": "/tech_logos/express-original.svg"
         },
         {
-          "url": "/uploads/mongodb_original_1534d2151e.svg"
+          "url": "/tech_logos/mongodb-original.svg"
         },
         {
-          "url": "/uploads/react_original_808a6a0f7b.svg"
+          "url": "/tech_logos/react-original.svg"
         },
         {
-          "url": "/uploads/nodejs_original_c9e9ed3c8d.svg"
+          "url": "/tech_logos/nodejs-original.svg"
         }
       ],
       "project_categories": [
