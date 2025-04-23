@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "Title": "Frontend Development",
+      "Logo": {
+        "url": "/uploads/Frame_2232811_4_a0af18cf24_b835ef93d4.webp"
+      },
+      "Skills": [
+        {
+          "Name": "React.js (Hooks, Context API, Component Lifecycle)"
+        },
+        {
+          "Name": "Next.js (Server-Side Rendering, API Routes)"
+        },
+        {
+          "Name": "Tailwind CSS & Styled Components"
+        },
+        {
+          "Name": "JavaScript (ES6+, Async/Await, Modules)"
+        },
+        {
+          "Name": "HTML5 & CSS3 (Flexbox, Grid, Animations)"
+        },
+        {
+          "Name": "Responsive & Mobile-First Design"
+        }
+      ]
+    },
+    {
+      "Title": "Backend Development",
+      "Logo": {
+        "url": "/uploads/8099229_02ddc55062_7bc71f2818.webp"
+      },
+      "Skills": [
+        {
+          "Name": "Node.js & Express.js"
+        },
+        {
+          "Name": "Strapi (Headless CMS)"
+        },
+        {
+          "Name": "RESTful APIs"
+        },
+        {
+          "Name": "Authentication (JWT & OAuth)"
+        },
+        {
+          "Name": "SQL & NoSQL Databases (PostgreSQL, MongoDB)"
+        },
+        {
+          "Name": "WebSockets & Real-Time Communication"
+        }
+      ]
+    },
+    {
+      "Title": "Soft Skills & Teamwork",
+      "Logo": {
+        "url": "/uploads/png_clipart_logo_graphy_teamwork_community_miscellaneous_purple_thumbnail_c440f827df_6288df916f.webp"
+      },
+      "Skills": [
+        {
+          "Name": "Problem-Solving & Debugging"
+        },
+        {
+          "Name": "Agile Development & Scrum"
+        },
+        {
+          "Name": "Code Reviews & Version Control (Git)"
+        },
+        {
+          "Name": "Effective Communication & Collaboration"
+        },
+        {
+          "Name": "Client Handling & Requirement Gathering"
+        },
+        {
+          "Name": "Time Management & Task Prioritization"
+        }
+      ]
+    }
+  ]
+}

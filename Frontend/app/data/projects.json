@@ -1,0 +1,41 @@
+{
+  "data": [
+    {
+      "Title": "Dummy Project 1",
+      "Description": null,
+      "LiveURL": "https://liveurl.com",
+      "GithubURL": "https://github.com",
+      "isFeatured": true,
+      "ProjectImages": [
+        {
+          "url": "/uploads/default2_1b524cdb85.jpg"
+        },
+        {
+          "url": "/uploads/default3_25ccbd335b.jpg"
+        },
+        {
+          "url": "/uploads/default1_faec62c254.webp"
+        }
+      ],
+      "TechStackLogos": [
+        {
+          "url": "/uploads/express_original_6156626136.svg"
+        },
+        {
+          "url": "/uploads/mongodb_original_1534d2151e.svg"
+        },
+        {
+          "url": "/uploads/react_original_808a6a0f7b.svg"
+        },
+        {
+          "url": "/uploads/nodejs_original_c9e9ed3c8d.svg"
+        }
+      ],
+      "project_categories": [
+        {
+          "Category": "Full Stack"
+        }
+      ]
+    }
+  ]
+}

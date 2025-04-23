@@ -1,0 +1,13 @@
+{
+    "data": [
+      {
+        "Category": "Frontend Only"
+      },
+      {
+        "Category": "Backend Only"
+      },
+      {
+        "Category": "Full Stack"
+      }
+    ]
+  }
