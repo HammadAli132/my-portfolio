@@ -1,6 +1,7 @@
 {
   "data": [
     {
+      "id": 1,
       "Title": "LabEase",
       "Description": "Labease is a comprehensive Lab Management System designed to streamline operations in educational and research labs. It features multi-role support for Admins, Instructors, Lab Assistants, and Students, enabling efficient scheduling, equipment management, reporting, and inventory tracking. With integrated chatbot assistance and real-time notifications, Labease ensures a modern, organized, and user-friendly lab environment.",
       "LiveURL": null,
@@ -50,6 +51,7 @@
       ]
     },
     {
+      "id": 2,
       "Title": "FASTbook Social Media Desktop Application",
       "Description": "FASTbook is a JavaFX-powered social media desktop application built exclusively for FAST University students. The platform offers an intuitive interface where students can connect, share posts, and engage based on shared academic and social interests. With tailored filters, secure login, and a clean user experience, FASTbook fosters a vibrant digital community within the university.",
       "LiveURL": null,
@@ -93,6 +95,7 @@
       ]
     },
     {
+      "id": 3,
       "Title": "Reactify Mart",
       "Description": "Reactify Mart is a dynamic e-commerce web application developed using the MERN stack. It features a sleek frontend built with React and Vanilla CSS, offering smooth navigation, product listings, and shopping cart functionality. Designed for performance and scalability, it aims to replicate real-world shopping experiences with a developer-friendly structure.\nNote: Responsive design, Backend, and Payment Integration is in progress.",
       "LiveURL": "https://brilliant-churros-ed84d0.netlify.app/",
@@ -136,6 +139,7 @@
       ]
     },
     {
+      "id": 4,
       "Title": "Collaborative Whiteboard",
       "Description": "The Collaborative Whiteboard is a real-time drawing and communication platform designed for remote teamwork and brainstorming. Built with WebSockets and advanced canvas APIs, it allows users to sketch, write, and collaborate in shared rooms with integrated chat functionality. Perfect for classrooms, meetings, or creative teams, it brings remote collaboration to life in a simple yet powerful way.",
       "LiveURL": null,

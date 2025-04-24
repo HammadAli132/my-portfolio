@@ -113,8 +113,8 @@ function ProjectPage() {
               </motion.div>
             ) : filteredProjects.length > 0 ? (
               filteredProjects.map((project) => {
-                const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
-                const isDevMode = process.env.NEXT_PUBLIC_DEV_MODE === "true";
+                // const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+                // const isDevMode = process.env.NEXT_PUBLIC_DEV_MODE === "true";
 
                 const urls = project.ProjectImages?.map((img) => img.url);
                 let imageUrls = [];
