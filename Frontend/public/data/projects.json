@@ -91,6 +91,86 @@
           "Category": "Desktop Application"
         }
       ]
+    },
+    {
+      "Title": "Reactify Mart",
+      "Description": "Reactify Mart is a dynamic e-commerce web application developed using the MERN stack. It features a sleek frontend built with React and Vanilla CSS, offering smooth navigation, product listings, and shopping cart functionality. Designed for performance and scalability, it aims to replicate real-world shopping experiences with a developer-friendly structure.\nNote: Responsive design, Backend, and Payment Integration is in progress.",
+      "LiveURL": "https://brilliant-churros-ed84d0.netlify.app/",
+      "GithubURL": "https://github.com/HammadAli132/Reactify-Mart",
+      "isFeatured": true,
+      "ProjectImages": [
+        {
+          "url": "/projectCardImages/reactify-mart/mart1.png"
+        },
+        {
+          "url": "/projectCardImages/reactify-mart/mart2.png"
+        },
+        {
+          "url": "/projectCardImages/reactify-mart/mart3.png"
+        },
+        {
+          "url": "/projectCardImages/reactify-mart/mart4.png"
+        },
+        {
+          "url": "/projectCardImages/reactify-mart/mart5.png"
+        },
+        {
+          "url": "/projectCardImages/reactify-mart/mart6.png"
+        }
+      ],
+      "TechStackLogos": [
+        {
+          "url": "/tech_logos/css3-original.svg"
+        },
+        {
+          "url": "/tech_logos/javascript-original.svg"
+        },
+        {
+          "url": "/tech_logos/react-original.svg"
+        }
+      ],
+      "project_categories": [
+        {
+          "Category": "Frontend Only"
+        }
+      ]
+    },
+    {
+      "Title": "Collaborative Whiteboard",
+      "Description": "The Collaborative Whiteboard is a real-time drawing and communication platform designed for remote teamwork and brainstorming. Built with WebSockets and advanced canvas APIs, it allows users to sketch, write, and collaborate in shared rooms with integrated chat functionality. Perfect for classrooms, meetings, or creative teams, it brings remote collaboration to life in a simple yet powerful way.",
+      "LiveURL": null,
+      "GithubURL": "https://github.com/HammadAli132/Collaborative-Whiteboard",
+      "isFeatured": true,
+      "ProjectImages": [
+        {
+          "url": "/projectCardImages/collab-whiteboard/Collab1.png"
+        },
+        {
+          "url": "/projectCardImages/collab-whiteboard/Collab2.png"
+        },
+        {
+          "url": "/projectCardImages/collab-whiteboard/Collab3.png"
+        }
+      ],
+      "TechStackLogos": [
+        {
+          "url": "/tech_logos/css3-original.svg"
+        },
+        {
+          "url": "/tech_logos/javascript-original.svg"
+        },
+        {
+          "url": "/tech_logos/react-original.svg"
+        },
+        {
+          "url": "/tech_logos/socketio-original.svg"
+        }
+      ],
+      "project_categories": [
+        {
+          "Category": "Frontend Only"
+        }
+      ]
     }
   ]
 }
