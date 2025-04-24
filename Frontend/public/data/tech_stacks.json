@@ -4,16 +4,108 @@
         "Category": "Frontend",
         "Technologies": [
           {
+            "url": "/tech_logos/html5-original.svg"
+          },
+          {
+            "url": "/tech_logos/css3-original.svg"
+          },
+          {
+            "url": "/tech_logos/javascript-original.svg"
+          },
+          {
+            "url": "/tech_logos/tailwindcss-original.svg"
+          },
+          {
             "url": "/tech_logos/react-original.svg"
           },
           {
-            "url": "/tech_logos/mongodb-original.svg"
+            "url": "/tech_logos/webpack-original.svg"
+          },
+          {
+            "url": "/tech_logos/framermotion-original.svg"
+          },
+          {
+            "url": "/tech_logos/wordpress-plain.svg"
+          },
+          {
+            "url": "/tech_logos/nextjs-original.svg"
+          }
+        ]
+      },
+      {
+        "Category": "Backend",
+        "Technologies": [
+          {
+            "url": "/tech_logos/nodejs-original.svg"
           },
           {
             "url": "/tech_logos/express-original.svg"
           },
           {
-            "url": "/tech_logos/nodejs-original.svg"
+            "url": "/tech_logos/socketio-original.svg"
+          },
+          {
+            "url": "/tech_logos/oauth-original.svg"
+          },
+          {
+            "url": "/tech_logos/strapi.png"
+          }
+        ]
+      },
+      {
+        "Category": "Database",
+        "Technologies": [
+          {
+            "url": "/tech_logos/mongodb-original.svg"
+          },
+          {
+            "url": "/tech_logos/postgresql-original.svg"
+          },
+          {
+            "url": "/tech_logos/mysql-original.svg"
+          }
+        ]
+      },
+      {
+        "Category": "Project Management",
+        "Technologies": [
+          {
+            "url": "/tech_logos/trello-original.svg"
+          },
+          {
+            "url": "/tech_logos/notion-original.svg"
+          },
+          {
+            "url": "/tech_logos/clickup.png"
+          },
+          {
+            "url": "/tech_logos/github-original.svg"
+          }
+        ]
+      },
+      {
+        "Category": "Other Proficiencies",
+        "Technologies": [
+          {
+            "url": "/tech_logos/c-original.svg"
+          },
+          {
+            "url": "/tech_logos/cplusplus-original.svg"
+          },
+          {
+            "url": "/tech_logos/python-original.svg"
+          },
+          {
+            "url": "/tech_logos/java-original.svg"
+          },
+          {
+            "url": "/tech_logos/postman-original.svg"
+          },
+          {
+            "url": "/tech_logos/figma-original.svg"
+          },
+          {
+            "url": "/tech_logos/docker-original.svg"
           }
         ]
       }
