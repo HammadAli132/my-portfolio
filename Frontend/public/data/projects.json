@@ -1,23 +1,38 @@
 {
   "data": [
     {
-      "Title": "Dummy Local Project 1",
-      "Description": null,
-      "LiveURL": "https://liveurl.com",
-      "GithubURL": "https://github.com",
+      "Title": "LabEase",
+      "Description": "Labease is a comprehensive Lab Management System designed to streamline operations in educational and research labs. It features multi-role support for Admins, Instructors, Lab Assistants, and Students, enabling efficient scheduling, equipment management, reporting, and inventory tracking. With integrated chatbot assistance and real-time notifications, Labease ensures a modern, organized, and user-friendly lab environment.",
+      "LiveURL": null,
+      "GithubURL": "https://github.com/HammadAli132/LabEase",
       "isFeatured": true,
       "ProjectImages": [
         {
-          "url": "/projectCardImages/defaults/default1.webp"
+          "url": "/projectCardImages/lab-ease/lab1.png"
         },
         {
-          "url": "/projectCardImages/defaults/default2.jpg"
+          "url": "/projectCardImages/lab-ease/lab2.png"
         },
         {
-          "url": "/projectCardImages/defaults/default3.jpg"
+          "url": "/projectCardImages/lab-ease/lab3.png"
+        },
+        {
+          "url": "/projectCardImages/lab-ease/lab4.png"
+        },
+        {
+          "url": "/projectCardImages/lab-ease/lab5.png"
         }
       ],
       "TechStackLogos": [
+        {
+          "url": "/tech_logos/html5-original.svg"
+        },
+        {
+          "url": "/tech_logos/css3-original.svg"
+        },
+        {
+          "url": "/tech_logos/javascript-original.svg"
+        },
         {
           "url": "/tech_logos/express-original.svg"
         },
@@ -25,15 +40,55 @@
           "url": "/tech_logos/mongodb-original.svg"
         },
         {
-          "url": "/tech_logos/react-original.svg"
-        },
-        {
           "url": "/tech_logos/nodejs-original.svg"
         }
       ],
       "project_categories": [
         {
+          "Category": "Backend Only"
+        }
+      ]
+    },
+    {
+      "Title": "FASTbook Social Media Desktop Application",
+      "Description": "FASTbook is a JavaFX-powered social media desktop application built exclusively for FAST University students. The platform offers an intuitive interface where students can connect, share posts, and engage based on shared academic and social interests. With tailored filters, secure login, and a clean user experience, FASTbook fosters a vibrant digital community within the university.",
+      "LiveURL": null,
+      "GithubURL": "https://github.com/DaniyalFaraz2003/SDA-JavaFX-Social-Media-Application",
+      "isFeatured": true,
+      "ProjectImages": [
+        {
+          "url": "/projectCardImages/fastbook/fastbook1.png"
+        },
+        {
+          "url": "/projectCardImages/fastbook/fastbook2.png"
+        },
+        {
+          "url": "/projectCardImages/fastbook/fastbook3.png"
+        },
+        {
+          "url": "/projectCardImages/fastbook/fastbook4.png"
+        },
+        {
+          "url": "/projectCardImages/fastbook/fastbook5.png"
+        }
+      ],
+      "TechStackLogos": [
+        {
+          "url": "/tech_logos/css3-original.svg"
+        },
+        {
+          "url": "/tech_logos/java-original.svg"
+        },
+        {
+          "url": "/tech_logos/mysql-original.svg"
+        }
+      ],
+      "project_categories": [
+        {
           "Category": "Full Stack"
+        },
+        {
+          "Category": "Desktop Application"
         }
       ]
     }
