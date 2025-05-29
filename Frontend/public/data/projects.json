@@ -175,6 +175,106 @@
           "Category": "Full Stack"
         }
       ]
+    },
+    {
+      "id": 5,
+      "Title": "Employee Performance & Feedback System",
+      "Description": "The Employee Performance & Feedback (EPF) System is a full-stack MERN web application designed to streamline performance management in organizations. It enables admins and HR teams to set employee goals, collect structured feedback, evaluate performance trends, and visualize analytics through an intuitive dashboard. The system improves transparency and efficiency in workforce evaluation by integrating role-based access, secure authentication, and real-time performance tracking.",
+      "LiveURL": null,
+      "GithubURL": "https://github.com/HammadAli132/EPF-System",
+      "isFeatured": true,
+      "ProjectImages": [
+        {
+          "url": "/projectCardImages/epf-system/epfs0.png"
+        },
+        {
+          "url": "/projectCardImages/epf-system/epfs1.png"
+        },
+        {
+          "url": "/projectCardImages/epf-system/epfs2.png"
+        },
+        {
+          "url": "/projectCardImages/epf-system/epfs3.png"
+        },
+        {
+          "url": "/projectCardImages/epf-system/epfs4.png"
+        },
+        {
+          "url": "/projectCardImages/epf-system/epfs5.png"
+        },
+        {
+          "url": "/projectCardImages/epf-system/epfs6.png"
+        }
+      ],
+      "TechStackLogos": [
+        {
+          "url": "/tech_logos/mongodb-original.svg"
+        },
+        {
+          "url": "/tech_logos/express-original.svg"
+        },
+        {
+          "url": "/tech_logos/react-original.svg"
+        },
+        {
+          "url": "/tech_logos/nodejs-original.svg"
+        }
+      ],
+      "project_categories": [
+        {
+          "Category": "Full Stack"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "Title": "Scrumban Management System",
+      "Description": "The Scrumban Management System is a productivity-focused web application that blends Scrum and Kanban methodologies to support agile teams. It features an integrated Kanban board, to-do lists, and repository-style file storage similar to GitHub, allowing teams to manage tasks, track progress, and store project files efficiently. Designed for seamless collaboration, it enhances workflow visibility and helps teams deliver projects more effectively by supporting sprint planning, backlog refinement, and real-time updates. The system also includes a dynamic sprint burndown chart for better visualization of sprint progress and team velocity.",
+      "LiveURL": null,
+      "GithubURL": "https://github.com/HammadAli132/Scrumban-Management-System",
+      "isFeatured": true,
+      "ProjectImages": [
+        {
+          "url": "/projectCardImages/scrumban-system/scrum1.png"
+        },
+        {
+          "url": "/projectCardImages/scrumban-system/scrum2.png"
+        },
+        {
+          "url": "/projectCardImages/scrumban-system/scrum3.png"
+        },
+        {
+          "url": "/projectCardImages/scrumban-system/scrum4.png"
+        },
+        {
+          "url": "/projectCardImages/scrumban-system/scrum5.png"
+        },
+        {
+          "url": "/projectCardImages/scrumban-system/scrum6.png"
+        },
+        {
+          "url": "/projectCardImages/scrumban-system/scrum7.png"
+        }
+      ],
+      "TechStackLogos": [
+        {
+          "url": "/tech_logos/mongodb-original.svg"
+        },
+        {
+          "url": "/tech_logos/express-original.svg"
+        },
+        {
+          "url": "/tech_logos/react-original.svg"
+        },
+        {
+          "url": "/tech_logos/nodejs-original.svg"
+        }
+      ],
+      "project_categories": [
+        {
+          "Category": "Full Stack"
+        }
+      ]
     }
   ]
 }
