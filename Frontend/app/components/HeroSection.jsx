@@ -67,9 +67,9 @@ function HeroSection() {
         className="flex flex-col-reverse md:flex-row justify-between items-center gap-12 lg:max-w-4/6 mx-auto"
       >
         {/* Left part: Title, brief intro, CTA Buttons */}
-        <div className="text-center md:text-left md:w-1/2">
+        <div className="text-center md:w-full">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-            Elevate Your Ideas with <br />
+            Elevate Your Ideas with 
             <span className="text-primary">
               <Typewriter
                 words={[
@@ -90,7 +90,7 @@ function HeroSection() {
           <p className="mt-4 text-gray-300 text-lg">
             Hi, I'm <span className="font-semibold">Hammad Ali</span>, a passionate Software Engineer dedicated to building efficient, scalable, and innovative solutions.
           </p>
-          <div className="mt-6 flex flex-col md:flex-row md:flex-wrap gap-4">
+          <div className="mt-6 flex flex-col md:flex-row md:flex-wrap gap-4 justify-center items-center">
             <a
               href="#projects"
               className="py-3 px-5 bg-secondary rounded-md hover:bg-tertiary transition text-white text-lg font-semibold"
@@ -116,7 +116,7 @@ function HeroSection() {
         </div>
 
         {/* Right part: Optimized Image */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
@@ -129,7 +129,7 @@ function HeroSection() {
             style={{ objectFit: "cover" }} // Optional: adjust how the image fills the container
             priority
           />
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   );
